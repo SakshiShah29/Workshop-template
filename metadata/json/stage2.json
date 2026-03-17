@@ -1,0 +1,11 @@
+{
+    "name": "ChainBeast — Warrior Form",
+    "description": "Battle-hardened and radiating power. Stage 2 of 3.",
+    "image": "https://apricot-immense-carp-804.mypinata.cloud/ipfs/bafybeic6axh4tlsjp3kre42b27n7n64oroc5pgblhlgy5iavlowsbvlk64",
+    "attributes": [
+        { "trait_type": "Stage", "value": 2, "display_type": "number", "max_value": 3 },
+        { "trait_type": "Form", "value": "Warrior" },
+        { "trait_type": "Power Level", "value": 500, "display_type": "number", "max_value": 1000 }
+    ],
+    "external_url": "https://github.com/REPO_PLACEHOLDER/chainbeasts"
+}

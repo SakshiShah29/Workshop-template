@@ -1,0 +1,11 @@
+{
+    "name": "ChainBeast — Legendary Form",
+    "description": "The ultimate transformation. Maximum power unleashed. Stage 3 of 3.",
+    "image": "https://apricot-immense-carp-804.mypinata.cloud/ipfs/bafybeicol3mthoi3fn2ykjoaf7paokebjz36kza43sz5tdkzcfj23vqrue",
+    "attributes": [
+        { "trait_type": "Stage", "value": 3, "display_type": "number", "max_value": 3 },
+        { "trait_type": "Form", "value": "Legendary" },
+        { "trait_type": "Power Level", "value": 1000, "display_type": "number", "max_value": 1000 }
+    ],
+    "external_url": "https://github.com/REPO_PLACEHOLDER/chainbeasts"
+}

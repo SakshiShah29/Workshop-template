@@ -1,0 +1,11 @@
+{
+    "name": "ChainBeast — Rookie Form",
+    "description": "A young warrior just awakening their latent power. Stage 1 of 3.",
+    "image": "https://apricot-immense-carp-804.mypinata.cloud/ipfs/bafybeifa22afazxw2ktjx5mow2yhekplypugpwtyrnmz2osqdxvoejowhy",
+    "attributes": [
+        { "trait_type": "Stage", "value": 1, "display_type": "number", "max_value": 3 },
+        { "trait_type": "Form", "value": "Rookie" },
+        { "trait_type": "Power Level", "value": 100, "display_type": "number", "max_value": 1000 }
+    ],
+    "external_url": "https://github.com/REPO_PLACEHOLDER/chainbeasts"
+}
