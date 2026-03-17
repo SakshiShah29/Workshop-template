@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme inline {
+    --color-dark: #0a0a0f;
+    --color-card: #111118;
+    --color-card-hover: #1a1a25;
+    --color-accent: #22d3ee;
+    --color-accent-2: #8b5cf6;
+    --color-accent-3: #ec4899;
+    --color-accent-4: #34d399;
+    --font-display: var(--font-syne);
+    --font-body: var(--font-inter);
+    --font-mono: var(--font-jetbrains-mono);
+}
+
+body {
+    background: var(--color-dark);
+    color: #f4f4f5;
+    font-family: var(--font-body), system-ui, sans-serif;
+}
+
+/* Gradient border card */
+.gradient-border {
+    position: relative;
+    background: var(--color-card);
+}
+.gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(34,211,238,0.3), rgba(139,92,246,0.3), rgba(236,72,153,0.15));
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+/* Glow hover effect */
+.glow-cyan:hover { box-shadow: 0 0 30px rgba(34,211,238,0.12); }
+.glow-violet:hover { box-shadow: 0 0 30px rgba(139,92,246,0.12); }
+.glow-pink:hover { box-shadow: 0 0 30px rgba(236,72,153,0.12); }
+.glow-emerald:hover { box-shadow: 0 0 30px rgba(52,211,153,0.12); }
+
+/* Gradient text */
+.text-gradient {
+    background: linear-gradient(135deg, #22d3ee, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.text-gradient-pink {
+    background: linear-gradient(135deg, #ec4899, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Marquee */
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.animate-marquee { animation: marquee 30s linear infinite; }
+
+/* Subtle scanlines */
+.scanlines::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,0,0,0.015) 3px, rgba(0,0,0,0.015) 6px);
+    pointer-events: none;
+    z-index: 50;
+}
+
+/* RainbowKit */
+[data-rk] button { border-radius: 8px !important; }
