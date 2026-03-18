@@ -1,32 +1,29 @@
 import type { Metadata } from 'next';
-import { Syne, Inter, JetBrains_Mono } from 'next/font/google';
+import { Space_Grotesk, DM_Mono } from 'next/font/google';
 import { Web3Provider } from '@/providers/Web3Provider';
 import './globals.css';
 
-const syne = Syne({
+const spaceGrotesk = Space_Grotesk({
     subsets: ['latin'],
-    variable: '--font-syne',
+    variable: '--font-space-grotesk',
+    weight: ['400', '500', '600', '700'],
 });
 
-const inter = Inter({
+const dmMono = DM_Mono({
     subsets: ['latin'],
-    variable: '--font-inter',
-});
-
-const jetbrainsMono = JetBrains_Mono({
-    subsets: ['latin'],
-    variable: '--font-jetbrains-mono',
+    variable: '--font-dm-mono',
+    weight: ['400', '500'],
 });
 
 export const metadata: Metadata = {
     title: 'ChainBeasts — Anime NFT Evolution',
-    description: 'Mint and evolve anime beast NFTs with $POWER tokens',
+    description: 'Mint and evolve anime beast NFTs with $POWER tokens on Ethereum Sepolia',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
-            <body className={`${syne.variable} ${inter.variable} ${jetbrainsMono.variable} scanlines`}>
+            <body className={`${spaceGrotesk.variable} ${dmMono.variable}`}>
                 <Web3Provider>
                     {children}
                 </Web3Provider>

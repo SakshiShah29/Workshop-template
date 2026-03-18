@@ -1,8 +1,11 @@
 // ============================================
 // DEPLOYED CONTRACT ADDRESSES (Ethereum Sepolia)
 // ============================================
-export const POWER_TOKEN_ADDRESS = '0x38bfb6ccd9360a07894db6d215e842098be92efb' as const;
-export const CHAIN_BEASTS_ADDRESS = '0x806322a98a3a1c131e4409f5f3de08c247255eb7' as const;
+export const POWER_TOKEN_ADDRESS = '' as const;
+export const CHAIN_BEASTS_ADDRESS = '' as const;
+
+// Pinata Gateway for IPFS images
+export const PINATA_GATEWAY = 'https://apricot-immense-carp-804.mypinata.cloud/ipfs';
 
 // Minimal ABIs — only the functions the frontend needs
 export const POWER_TOKEN_ABI = [
@@ -32,6 +35,13 @@ export const POWER_TOKEN_ABI = [
             { name: 'spender', type: 'address' },
         ],
         outputs: [{ name: '', type: 'uint256' }],
+    },
+    {
+        name: 'symbol',
+        type: 'function',
+        stateMutability: 'view',
+        inputs: [],
+        outputs: [{ name: '', type: 'string' }],
     },
 ] as const;
 
