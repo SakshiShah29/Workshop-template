@@ -52,15 +52,33 @@ forge --version
 ```
 
 **Windows (WSL required):**
+
+Foundry does not run natively on Windows. You need WSL (Windows Subsystem for Linux).
+
+**Step 1 — Install WSL** (run in PowerShell or Command Prompt as Administrator):
+```powershell
+wsl --install
+```
+This installs WSL 2 with Ubuntu by default. Restart your computer when prompted.
+
+**Step 2 — Open Ubuntu** from the Start menu. On first launch it will ask you to create a Unix username and password.
+
+**Step 3 — Install Foundry inside WSL:**
 ```bash
-# In WSL terminal:
 curl -L https://foundry.paradigm.xyz | bash
 source ~/.bashrc
 foundryup
-forge --version
 ```
 
-> **Common issue:** If `foundryup` is not found after install, you missed the `source` step above.
+**Step 4 — Verify:**
+```bash
+forge --version
+# forge 0.x.x (...)
+```
+
+> **WSL already installed?** If you have WSL but the `wsl --install` command fails, open Ubuntu directly from the Start menu and continue from Step 3.
+
+> **Common issue:** If `foundryup: command not found` after install, run `source ~/.bashrc` and retry. If `forge: command not found` after `foundryup`, close and reopen the Ubuntu terminal.
 
 ---
 
@@ -250,6 +268,8 @@ cast balance <WALLET_ADDR> --rpc-url $ETH_SEPOLIA_RPC_URL
 |-------|-----|
 | `foundryup: command not found` | Run `source ~/.zshrc` (or `~/.bashrc`), then retry |
 | `forge: command not found` | Same as above — shell needs to reload PATH |
+| `wsl --install` fails (Windows) | Your Windows may already have WSL — open Ubuntu from Start menu directly |
+| `curl` not found in WSL | Run `sudo apt update && sudo apt install curl -y` first |
 | `Error: No such file or directory: lib/openzeppelin-contracts` | Run `forge install` inside `contracts/` |
 | `ERC20InsufficientAllowance` | Call `approve(chainBeastsAddress, amount)` on PowerToken first |
 | `ERC20InsufficientBalance` | Your wallet doesn't have enough $POWER — check balance |
