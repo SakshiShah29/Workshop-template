@@ -132,7 +132,7 @@ Create a free app at [Alchemy](https://alchemy.com) or [Infura](https://infura.i
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/REPO_PLACEHOLDER/chainbeasts
+git clone https://github.com/SakshiShah29/Workshop-template.git
 cd chainbeasts/contracts
 
 # 2. Install Foundry dependencies (OpenZeppelin, forge-std)
